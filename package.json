@@ -1,0 +1,33 @@
+{
+  "name": "iupets-server",
+  "version": "1.0.0",
+  "description": "Api para nueva version de app para mascotas",
+  "main": "app.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "compression": "^1.7.2",
+    "connect-multiparty": "^2.1.0",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mmdb-reader": "^1.1.0",
+    "moment": "^2.22.1",
+    "nodemailer": "^4.6.4",
+    "sequelize": "^4.37.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BazamIdeas/iupets-server.git"
+  },
+  "author": "Bazam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BazamIdeas/iupets-server/issues"
+  },
+  "homepage": "https://github.com/BazamIdeas/iupets-server#readme"
+}
