@@ -6,6 +6,8 @@ const Router = require("express").Router(),
     
     base = 'usuarios';
 
-Router.get(`/${base}`, Middlewares.Autorization.cliente, Controllers.Usuarios.todos);
+Router.get(`/${base}`, Middlewares.AuthorizationMiddleware.cliente, function(req, res){
+    res.send('hola a todos')
+});
 
 module.exports = Router;

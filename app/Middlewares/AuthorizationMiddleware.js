@@ -1,7 +1,7 @@
 'use strict';
 
-const authConfig = require('./config').auth,
-    Jwt = require('../Services').Jwt;
+const authConfig = require('../../config').auth,
+    JwtService = require('../Services').JwtService;
 
 module.exports = {
     
@@ -15,7 +15,7 @@ module.exports = {
             
             const token = req.headers.auth
 
-            Jwt.decodificar(token, (decoded, err) => {
+            JwtService.decodificar(token, (decoded, err) => {
 
                 if (err){
                     res.status(400).json();
@@ -55,7 +55,7 @@ module.exports = {
             
             const token = req.headers.auth
 
-            Jwt.decodificar(token, (decoded, err) => {
+            JwtService.decodificar(token, (decoded, err) => {
 
                 if (err){
                     res.status(400).json();

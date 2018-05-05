@@ -1,7 +1,7 @@
 'use strict';
 
 const MMDBReader = require('mmdb-reader'),
-    serverConfig = require('../config').server;
+    serverConfig = require('../../config').server;
 
 module.exports = {
     iso: ip => {

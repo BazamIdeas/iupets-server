@@ -14,7 +14,8 @@
     "mmdb-reader": "^1.1.0",
     "moment": "^2.22.1",
     "nodemailer": "^4.6.4",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "socket.io": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {

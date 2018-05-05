@@ -1,6 +1,6 @@
 'use strict';
 
-const authConfig = require('./config').auth,
+const authConfig = require('../../config').auth,
     jwt = require('jsonwebtoken'),
     moment = require('moment');
 
