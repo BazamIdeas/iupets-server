@@ -10,7 +10,7 @@ module.exports = {
         if (authConfig.enabled) {
 
             if(!req.headers.authorization){
-                return res.status(403).json()
+                return res.status(403).json({msg: "No autorizado"})
             }
             
             const token = req.headers.auth

@@ -13,11 +13,13 @@ const express = require('express'),
 	cookieParser = require('cookie-parser'),
 	bodyParser = require('body-parser'),
 	compression = require('compression'),
-	multipartMiddleware = require("connect-multiparty")();
+	multipartMiddleware = require("connect-multiparty")(),
+	helmet = require('helmet');
 
 const App = express();
 const server = require('http').createServer(App);
 
+App.use(helmet());
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({ extended: false }));
 App.use(cookieParser());
@@ -25,8 +27,7 @@ App.use(multipartMiddleware);
 
 App.use(express.static(__dirname + '/public'));
 
-App.use('/api', require('./routes'));
-
+App.use("/app", require('./routes'));
 
 // catch 404 and forward to error handler
 App.use((req, res, next) => {
@@ -34,8 +35,6 @@ App.use((req, res, next) => {
 	err.status = 404;
 	next(err);
 });
-
-App.disable('x-powered-by');
 
 // error handler
 App.use((err, req, res) => {
@@ -60,7 +59,7 @@ io.on('connection', socket => {
 });
 
 server.listen(serverConfig.port, () => {
-	console.log(`Servidor corriendo en : ${serverConfig.server}:${serverConfig.port}`);
+	console.log(`Servidor corriendo en : http://${serverConfig.server}:${serverConfig.port}`);
 });
 
 module.exports = App;
