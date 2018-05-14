@@ -7,7 +7,7 @@ const files = fs.readdirSync(__dirname);
 
 let models = {};
 
-files.forEach(function(file) {
+files.forEach(file => {
 	let name = path.basename(file, ".js");
 	if (name !== "index" && name !== "_Connection") { models[name] = require(`./${name}`); }
 });

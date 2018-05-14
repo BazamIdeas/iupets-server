@@ -1,7 +1,7 @@
 'use strict';
 
-const authConfig = require('../../config').auth,
-    JwtService = require('../Services').JwtService;
+const authConfig = require('config').auth,
+    JwtService = require('app/Services').JwtService;
 
 module.exports = {
     

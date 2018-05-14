@@ -1,6 +1,6 @@
 'use strict';
 
-const sequelize = require('./_Connection').sequelize;
+const sequelize = require('app/Models/_Connection').sequelize;
 
 const Usuario = mongoose.Schema({
     name: String

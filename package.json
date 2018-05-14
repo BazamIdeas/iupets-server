@@ -4,6 +4,7 @@
   "description": "Api para nueva version de app para mascotas",
   "main": "app.js",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "async": "^2.6.0",
     "compression": "^1.7.2",
     "connect-multiparty": "^2.1.0",

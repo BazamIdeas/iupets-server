@@ -7,7 +7,7 @@ const files = fs.readdirSync(__dirname);
 
 let repositories = {};
 
-files.forEach(function(file) {
+files.forEach(file => {
 	let name = path.basename(file, ".js");
 	if (name !== "index") { repositories[name] = require(`./${name}`); }
 });

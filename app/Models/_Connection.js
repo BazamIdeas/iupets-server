@@ -1,6 +1,6 @@
 'use strict';
 
-const databaseConfig = require('./config').database,
+const databaseConfig = require('config').database,
 
 const Mysql = databaseConfig.mysql;
 const Mongo = databaseConfig.mongo;
